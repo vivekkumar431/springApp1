@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="emp" class="com.simple.EmployeeBean">
+		<property name="empId" value="123445" />
+		<property name="empName" value="Vimal Jaiswal"></property>
+		<property name="salary" value="543265.23"></property>
+	</bean>
+	
+	<bean id="addbean" class="com.Obj.AddressBean">
+		<property name="hno" value="123445" />
+		<property name="name" value="Vimal Jaiswal"></property>
+		<property name="state" value="hyd"></property>
+	</bean>
+	
+	<bean class="com.Obj.EmployeeBean" id="empbean">
+		<property name="empid" value="4321"></property>
+		<property name="empname" value="vkvika" />
+		<property name="addbean" ref="addbean"></property>
+	</bean>
+	
+	<bean class="com.Sett.Cons.Company" id="comp">
+		<constructor-arg value="3456" />
+		<constructor-arg value="Google" />
+		<constructor-arg value="India" />
+	</bean>
+	
+	<bean class="com.Sett.Cons.Product" id="prod">
+		<constructor-arg value="1234" />
+		<constructor-arg value="Sampoo" />
+		<constructor-arg value="hyd" />
+		<constructor-arg ref="comp" />
+	</bean>
+	
+	<bean class="com.sprApp1.Student" id="stud">
+		<property name="sid" value="54332" />
+		<property name="sName" value="vivek" />
+		<property name="sFee" value="54322.866" />
+		<property name="s1" value="80" />
+		<property name="s2" value="85" />
+		<property name="s3" value="90" />
+	</bean>
+
+</beans>
